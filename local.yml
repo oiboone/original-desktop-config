@@ -1,0 +1,21 @@
+ # ansible-playbook local.yml
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install packages
+    apt: 
+      name:
+        - clamav
+        - clamtk
+        - firefox
+        - thunderbird
+        - virtualbox
+        - putty
+        - remmina
+        - openshot
+        - kdenlive
+         - vagrant
+        - kicad
+        - freecad
+        - owncloud-client
+        

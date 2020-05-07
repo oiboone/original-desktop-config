@@ -1,0 +1,20 @@
+ 
+ # ansible-playbook config.yml
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Copy putty config files
+    copy:
+      src: putty/
+      dest: /home/jeff/.putty/
+      owner: jeff
+      group: jeff
+  #    mode: '0644'
+  
+  - name: Copy remmina config files
+    copy:
+      src: remmina/
+      dest: /home/jeff/.remmina/
+      owner: jeff
+      group: jeff
+  #    mode: '0644'
