@@ -1,6 +1,10 @@
  
  # ansible-playbook config.yml
+ #
+ # Tasks for copying configuration files
+ #
 - hosts: localhost
+  connection: local
   become: true
   tasks:
   - name: Copy putty config files

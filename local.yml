@@ -1,5 +1,6 @@
  # ansible-playbook local.yml
 - hosts: localhost
+  connection: local
   become: true
   tasks:
   - name: Install packages
@@ -9,12 +10,13 @@
         - clamtk
         - firefox
         - thunderbird
+        - vlc
         - virtualbox
         - putty
         - remmina
         - openshot
         - kdenlive
-         - vagrant
+        - vagrant
         - kicad
         - freecad
         - owncloud-client
