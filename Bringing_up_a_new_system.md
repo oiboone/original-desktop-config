@@ -28,9 +28,12 @@ cd desktop-config
 #
 git config --global user.name "Ogden Boone"
 git config --global user.email o.boone@gmail.com
-git clone https://github.com/oiboone/desktop-config
+sudo git clone https://github.com/oiboone/desktop-config
 #
-sudo ansible-playbook main.yml
+sudo ansible-galaxy install -r requirements.yml
+sudo ansible-playbook local.yml
+sudo ansible-playbook zotero.yml
+
 ```
 
 # Connect to samba share on raspberry pi server

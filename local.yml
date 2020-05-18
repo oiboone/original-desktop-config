@@ -6,6 +6,10 @@
   - name: Install packages
     apt: 
       name:
+        - xorg # x window server
+        - sddm # display manager
+        - kde-plasma-desktop # basic kde desktop
+        - libreoffice
         - clamav
         - clamtk
         - firefox
@@ -21,8 +25,7 @@
         - freecad
         - owncloud-client
         - texlive
+        - texstudio
         - pandoc
         - pandoc-citeproc
         - pandoc-sidenote
-
-        
