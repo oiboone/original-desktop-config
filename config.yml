@@ -6,30 +6,33 @@
 - hosts: localhost
   connection: local
   become: true
+  vars:
+    username: jeff
+    usergroup: {{username}}
   tasks:
   - name: Copy putty config files
     copy:
       src: putty/
-      dest: /home/jeff/.putty/
-      owner: jeff
-      group: jeff
+      dest: /home/{{username}}/.putty/
+      owner: {{username}}
+      group: {{usergroup}}
       force: no
   #    mode: '0644'
   
   - name: Copy remmina config files
     copy:
       src: remmina/
-      dest: /home/jeff/.remmina/
-      owner: jeff
-      group: jeff
+      dest: /home/{{username}}/.remmina/
+      owner: {{username}}
+      group: {{usergroup}}
       force: no
   #    mode: '0644'
 
   - name: copy commonly used latex packages to local tex directory tree
     copy:
       src: latex/
-      dest: /home/jeff/texmf/tex/latex/jaj/
-      owner: jeff
-      group: jeff
+      dest: /home/{{username}}/texmf/tex/latex/jaj/
+      owner: {{username}}
+      group: {{usergroup}}
       force: no
       

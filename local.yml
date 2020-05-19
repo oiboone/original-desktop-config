@@ -6,24 +6,44 @@
   - name: Install packages
     apt: 
       name:
+        # Basic GUI stuff
         - xorg # x window server
-        - sddm # display manager
+        - sddm # display manager - provides graphical login
         - kde-plasma-desktop # basic kde desktop
-        - libreoffice
+        # sudo systemctl set-default graphical.target
+        # AV software
         - clamav
         - clamtk
+        # Office apps
+        - libreoffice
+        - okular
+        - skanlite # scanner software
+        - pdfarranger # split and merge
         - firefox
         - thunderbird
+        - chromium
         - vlc
+        - owncloud-client
+        - Elisa # music player
+        # Virtualization
         - virtualbox
+        - vagrant
+        # Remote access to UST
         - putty
         - remmina
+        # Graphics
+        - inkscape
+        - gimp
+        - imagemagick
+        - imagej
+        # Multimedia
         - openshot
         - kdenlive
-        - vagrant
+        - blender
+        # Engineering Software
         - kicad
         - freecad
-        - owncloud-client
+        # document preparation
         - texlive
         - texstudio
         - pandoc
